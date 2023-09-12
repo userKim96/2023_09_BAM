@@ -13,6 +13,16 @@ public class Main {
 			
 			if(command.length() == 0) {
 				System.out.println("명령어를 입력하세요");
+			} else	if(command.equals("exit")) {
+				break;
+			} else if(command.equals("article list")) {
+				System.out.println("게시글이 없습니다.");
+			} else if (command.equals("article write")) {
+				System.out.println("제목 : ");
+				String title = sc.nextLine();
+				
+				System.out.println("내용 : ");
+				String body = sc.nextLine();
 			} else {
 				System.out.println("존재하지 않는 명령어입니다. ");
 			}
@@ -26,11 +36,15 @@ public class Main {
 			if(command.equals("article list")) {
 				System.out.println("게시글이 없습니다.");
 			} else if (command.equals("article write")) {
+				int n = 0;
+				n++;
 				System.out.println("제목 : ");
 				String title = sc.nextLine();
 				
 				System.out.println("내용 : ");
 				String body = sc.nextLine();
+				
+				System.out.printf("%d번글이 생성되었습니다.", n);
 			}
 		}
 
